@@ -10,14 +10,19 @@ export async function onRequest(context) {
   }
 
   const api = `https://api.mcsrvstat.us/3/${host}`
-  const res = await fetch(api)
+
+  const res = await fetch(api, {
+    headers: {
+      "User-Agent": "status-page/1.0 (Cloudflare Pages)"
+    }
+  })
 
   const text = await res.text()
 
   let data
   try {
     data = JSON.parse(text)
-  } catch (e) {
+  } catch {
     return new Response(
       JSON.stringify({
         error: "Invalid response from mcsrvstat.us",
