@@ -1,7 +1,7 @@
 const servers = [
   {
-    name: "Hub Server",
-    host: "example.com"
+    name: "Main server",
+    host: "mc.stellarcielo.com"
   },
   {
     name: "Survival",
