@@ -9,7 +9,7 @@ export async function onRequest(context) {
     )
   }
 
-  const api = `https://api.mcsrvstat.us/2/${host}`
+  const api = `https://api.mcsrvstat.us/3/${host}`
   const res = await fetch(api)
   const data = await res.json()
 
