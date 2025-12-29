@@ -2,10 +2,6 @@ const servers = [
   {
     name: "Main server",
     host: "mc.stellarcielo.com"
-  },
-  {
-    name: "Survival",
-    host: "survival.example.com"
   }
 ]
 
