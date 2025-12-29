@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Status</title>
+  {{ $js := resources.Get "js/status.js" | minify }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</head>
+<body>
+  <h1>Server Status</h1>
+  <div id="servers"></div>
+</body>
+</html>
