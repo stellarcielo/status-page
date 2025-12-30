@@ -1,12 +1,3 @@
 baseURL = "https://status-page-d3a.pages.dev/"
 languageCode = "ja"
 title = "Server Status"
-
-theme = "PaperMod"
-
-[params]
-  defaultTheme = "dark"
-  ShowReadingTime = false
-  ShowBreadCrumbs = false
-  ShowPostNavLinks = false
-  ShowCodeCopyButtons = true
