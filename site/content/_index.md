@@ -2,7 +2,7 @@
 title: "Server Status"
 ---
 
-## Minecraft Network
+# Minecraft Network
 
 <div id="servers"></div>
 
