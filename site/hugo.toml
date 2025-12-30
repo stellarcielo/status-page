@@ -10,3 +10,8 @@ theme = "PaperMod"
   ShowBreadCrumbs = false
   ShowPostNavLinks = false
   ShowCodeCopyButtons = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

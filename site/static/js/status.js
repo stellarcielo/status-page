@@ -2,6 +2,10 @@ const servers = [
   {
     name: "Main server",
     host: "mc.stellarcielo.com"
+  },
+  {
+    name: "Offline server",
+    host: "test.stellarcielo.com"
   }
 ]
 
