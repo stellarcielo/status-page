@@ -1,4 +1,12 @@
-baseURL = 'https://status.stellarcielo.com/'
-languageCode = 'en-us'
-title = 'status-page'
+baseURL = "https://status.example.com/"
+languageCode = "ja"
+title = "Server Status"
+
 theme = "PaperMod"
+
+[params]
+  defaultTheme = "dark"
+  ShowReadingTime = false
+  ShowBreadCrumbs = false
+  ShowPostNavLinks = false
+  ShowCodeCopyButtons = true
