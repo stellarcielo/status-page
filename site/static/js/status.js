@@ -6,6 +6,10 @@ const servers = [
   {
     name: "Offline server",
     host: "test.stellarcielo.com"
+  },
+  {
+    name: "tmc",
+    host: "localhost:20100"
   }
 ]
 
