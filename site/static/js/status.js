@@ -1,15 +1,13 @@
 const servers = [
   {
     name: "Main server",
-    host: "mc.stellarcielo.com"
+    host: "mc.stellarcielo.com",
+    proxy: true
   },
   {
     name: "Offline server",
-    host: "test.stellarcielo.com"
-  },
-  {
-    name: "tmc",
-    host: "localhost:20100"
+    host: "test.stellarcielo.com",
+    proxy: false
   }
 ]
 
