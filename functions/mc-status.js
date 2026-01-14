@@ -1,6 +1,7 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url)
   const host = url.searchParams.get("host")
+  const port = url.searchParams.get("port").
 
   if (!host) {
     return new Response(
@@ -33,6 +34,10 @@ export async function onRequest(context) {
         headers: { "Content-Type": "application/json" }
       }
     )
+  }
+
+  if (!(port === 0)) {
+
   }
 
   return new Response(JSON.stringify(data), {

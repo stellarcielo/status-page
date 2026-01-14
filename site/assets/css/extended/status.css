@@ -1,31 +1,33 @@
 .status-card {
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
+  padding: 1.2rem;
+  margin: 1rem 0;
   background: var(--entry);
 }
 
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .status-title {
-  font-size: 1.2rem;
   font-weight: 600;
 }
 
-.status-online {
-  color: #2ecc71;
+.online { color: #2ecc71; }
+.offline { color: #e74c3c; }
+.proxy { opacity: .85; }
+.velocity-child { margin-left: 1rem; }
+.standalone { }
+
+.status-meta {
+  font-size: .85rem;
+  opacity: .7;
 }
 
-.status-offline {
-  color: #e74c3c;
-}
-
-.server-list {
-  margin-top: 1rem;
-}
-
-.server-row {
-  display: flex;
-  justify-content: space-between;
-  padding: .4rem 0;
-  border-bottom: 1px dashed var(--border);
+.loading {
+  opacity: .6;
+  font-style: italic;
 }
