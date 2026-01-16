@@ -22,7 +22,7 @@ function timeAgo(ts) {
 }
 
 async function loadStatus(server) {
-  const res = await fetch(`/api/status?host=${server.host}&port=${server.port}`);
+  const res = await fetch(`/mc-status?host=${server.host}&port=${server.port}`);
   const data = await res.json();
 
   const div = document.createElement("div")
