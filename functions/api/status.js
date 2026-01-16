@@ -1,5 +1,15 @@
 export async function onRequest() {
-    const results: Record<string, any> = {};
+    interface ServerStatus {
+        id: string;
+        name: string;
+        kind: "velocity-child" | "proxy" | "standalone";
+        online: boolean;
+        motd?: string;
+        players: { online: number; max: number };
+        updated_at: number;
+    }
+
+    const results: Record<string, ServerStatus> = {};
     const now = Date.now();
 
     // ===== Velocity Plugin =====
