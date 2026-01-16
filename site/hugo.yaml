@@ -10,6 +10,12 @@ ShowBreadCrumbs: false
 ShowPostNavLinks: false
 ShowCodeCopyButtons: true
 
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: https://stellarcielo.com
+
 markup:
   goldmark:
     renderer:
