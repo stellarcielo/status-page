@@ -1,6 +1,6 @@
 baseURL: "https://status.stellarcielo.com/" # ページ内の基本URLを設定 大事!!
 languageCode: "ja-JP"
-title: "Home"
+title: "Server Status"
 
 theme: ["PaperMod"] # Hugoテーマの設定
 
