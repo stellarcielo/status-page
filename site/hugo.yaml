@@ -1,0 +1,16 @@
+baseURL: "https://stellarcielo.com/" # ページ内の基本URLを設定 大事!!
+languageCode: "ja-JP"
+title: "Home"
+
+theme: ["PaperMod"] # Hugoテーマの設定
+
+defaultTheme: dark
+ShowReadingTime: false
+ShowBreadCrumbs: false
+ShowPostNavLinks: false
+ShowCodeCopyButtons: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
