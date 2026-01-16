@@ -1,11 +1,51 @@
 const root = document.getElementById("status-root");
 
+const servers = [
+  {
+    name: "Main server",
+    host: "mc.stellarcielo.com",
+    port: 25464
+  },
+  {
+    name: "Offline server",
+    host: "example.stellarcielo.com",
+    port: 0
+  }
+]
+
 function timeAgo(ts) {
   const s = Math.floor((Date.now() - ts) / 1000);
   if (s < 60) return `${s}s ago`;
   const m = Math.floor(s / 60);
   if (m < 60) return `${m}m ago`;
   return `${Math.floor(m / 60)}h ago`;
+}
+
+async function loadStatus(server) {
+  const res = await fetch(`/api/status?host=${server.host}&port=${server.port}`);
+  const data = await res.json();
+
+  const div = document.createElement("div")
+  div.innerHTML = `
+    <div class="status-header">
+        <span class="status-title">${server.name}</span>
+        <span class="${data.online ? "online" : "offline"}">
+            ${s.online ? "🟢 Online" : "🔴 Offline"}
+        </span>
+    </div>
+    
+    <div class="status-meta">
+      Players: ${server.players.online} / ${server.players.max}
+    </div>
+
+    ${server.motd ? `<div>${server.motd}</div>` : ""}
+
+    <div class="status-meta">
+      Updated ${timeAgo(server.updated_at)}
+    </div>
+  `;
+
+  return div;
 }
 
 function renderServer(s) {
@@ -35,17 +75,8 @@ function renderServer(s) {
 }
 
 (async () => {
-  const res = await fetch("/api/status");
-  const data = await res.json();
-
   root.innerHTML = "";
-
-  // 並び順制御
-  const order = ["proxy", "velocity-child", "standalone"];
-
-  order.forEach(kind => {
-    Object.values(data)
-        .filter(s => s.kind === kind)
-        .forEach(s => root.appendChild(renderServer(s)));
-  });
+  for (const s of servers) {
+    root.appendChild(await loadStatus(s));
+  }
 })();

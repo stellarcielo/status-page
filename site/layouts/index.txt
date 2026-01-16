@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Server Status</title>
-  {{ $js := resources.Get "js/status.js" | minify }}
+  {{ $js := resources.Get "js/status.ts" | minify }}
   <script src="{{ $js.RelPermalink }}" defer></script>
 </head>
 <body>
