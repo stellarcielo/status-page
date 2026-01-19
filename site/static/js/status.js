@@ -9,7 +9,7 @@ const servers = [
   },
   {
     name: "tmc",
-    host: "localhost:20100"
+    host: "tendrillimc.stellarcielo.com"
   }
 ]
 
