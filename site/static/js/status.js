@@ -8,7 +8,7 @@ const servers = [
     host: "test.stellarcielo.com"
   },
   {
-    name: "tmc",
+    name: "tendrillimc",
     host: "tendrillimc.stellarcielo.com"
   }
 ]
